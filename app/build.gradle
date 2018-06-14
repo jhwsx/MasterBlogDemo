@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.wzc.masterblogdemo"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:preference-v7:25.3.1'
+    // v14 版本显然只是 v7.preference library的增量
+    implementation 'com.android.support:preference-v14:25.3.1'
+    implementation 'ren.yale.android:cachewebviewlib:1.4.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    // dagger2
+    // todo We are using the annotation processor provided by gradle for android. ???
+    implementation 'com.google.dagger:dagger:2.8'
+    // dagger-compiler is the annotation processing repo for generating the dependency graph classes during build time
+    annotationProcessor "com.google.dagger:dagger-compiler:2.8"
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+    implementation 'javax.inject:javax.inject:1'
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation 'com.squareup.okhttp3:okhttp:3.5.0'
+    implementation 'com.squareup.okio:okio:1.11.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation project(':okhttputils')
+}
