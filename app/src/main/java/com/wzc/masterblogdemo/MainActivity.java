@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.wzc.masterblogdemo.cachewebview.UseCacheWebViewLibActivity;
 import com.wzc.masterblogdemo.cachewebview.WebViewCacheActivity;
+import com.wzc.masterblogdemo.constraintlayout1_1_x.ConstraintLayoutActivity;
 import com.wzc.masterblogdemo.deeplink.DeepLinkActivity;
 import com.wzc.masterblogdemo.difference.GetWidthDifferenceActivity;
 import com.wzc.masterblogdemo.https.OkHttpHttpsActivity;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("使用CacheWebView开源库", UseCacheWebViewLibActivity.class);
         mHashMap.put("从源码的角度分析，getWidth() 与 getMeasuredWidth() 的不同之处", GetWidthDifferenceActivity.class);
         mHashMap.put("Android Https相关完全解析 当OkHttp遇到Https", OkHttpHttpsActivity.class);
+        mHashMap.put("ConstraintLayout 1.1.x", ConstraintLayoutActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

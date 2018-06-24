@@ -44,6 +44,7 @@
         <activity android:name=".deeplink.DeepLinkActivity"/>
         <activity android:name=".difference.GetWidthDifferenceActivity"/>
         <activity android:name=".https.OkHttpHttpsActivity"/>
+        <activity android:name=".constraintlayout1_1_x.ConstraintLayoutActivity"/>
     </application>
 
 </manifest>
