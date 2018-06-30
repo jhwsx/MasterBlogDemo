@@ -18,6 +18,7 @@ import com.wzc.masterblogdemo.difference.GetWidthDifferenceActivity;
 import com.wzc.masterblogdemo.https.OkHttpHttpsActivity;
 import com.wzc.masterblogdemo.layoutinflator.LayoutInflaterSetFactoryActivity;
 import com.wzc.masterblogdemo.preference.SettingsActivity;
+import com.wzc.masterblogdemo.textwachter.TextWatcherActivity;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("Android Https相关完全解析 当OkHttp遇到Https", OkHttpHttpsActivity.class);
         mHashMap.put("ConstraintLayout 1.1.x", ConstraintLayoutActivity.class);
         mHashMap.put("Using DialogFragments", MyActivity.class);
+        mHashMap.put("Android 文本监听接口TextWatcher详解", TextWatcherActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
