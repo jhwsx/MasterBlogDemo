@@ -45,6 +45,8 @@
         <activity android:name=".difference.GetWidthDifferenceActivity"/>
         <activity android:name=".https.OkHttpHttpsActivity"/>
         <activity android:name=".constraintlayout1_1_x.ConstraintLayoutActivity"/>
+        <activity android:name=".dialogfragment.MyActivity"
+                  android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
