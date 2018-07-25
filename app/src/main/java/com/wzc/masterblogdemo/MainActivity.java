@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.wzc.masterblogdemo.cachewebview.UseCacheWebViewLibActivity;
 import com.wzc.masterblogdemo.cachewebview.WebViewCacheActivity;
+import com.wzc.masterblogdemo.canvas.WhereAreCanvasFromActivity;
 import com.wzc.masterblogdemo.constraintlayout1_1_x.ConstraintLayoutActivity;
 import com.wzc.masterblogdemo.deeplink.DeepLinkActivity;
 import com.wzc.masterblogdemo.dialogfragment.MyActivity;
@@ -19,6 +20,7 @@ import com.wzc.masterblogdemo.https.OkHttpHttpsActivity;
 import com.wzc.masterblogdemo.layoutinflator.LayoutInflaterSetFactoryActivity;
 import com.wzc.masterblogdemo.preference.SettingsActivity;
 import com.wzc.masterblogdemo.textwachter.TextWatcherActivity;
+import com.wzc.masterblogdemo.zoominwebviewimg.ClickZoominWebViewImgActivity;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -40,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("ConstraintLayout 1.1.x", ConstraintLayoutActivity.class);
         mHashMap.put("Using DialogFragments", MyActivity.class);
         mHashMap.put("Android 文本监听接口TextWatcher详解", TextWatcherActivity.class);
+        mHashMap.put("探究Android View 绘制流程，Canvas 的由来", WhereAreCanvasFromActivity.class);
+        mHashMap.put("在开发中实现点击 WebView 中的图片，调用原生控件放大展示", ClickZoominWebViewImgActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -48,6 +48,9 @@
         <activity android:name=".dialogfragment.MyActivity"
                   android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".textwachter.TextWatcherActivity"/>
+        <activity android:name=".canvas.WhereAreCanvasFromActivity"/>
+        <activity android:name=".zoominwebviewimg.ClickZoominWebViewImgActivity"/>
+        <activity android:name=".zoominwebviewimg.ImageActivity"/>
     </application>
 
 </manifest>
