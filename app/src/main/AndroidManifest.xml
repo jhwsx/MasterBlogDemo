@@ -51,6 +51,7 @@
         <activity android:name=".canvas.WhereAreCanvasFromActivity"/>
         <activity android:name=".zoominwebviewimg.ClickZoominWebViewImgActivity"/>
         <activity android:name=".zoominwebviewimg.ImageActivity"/>
+        <activity android:name=".handlerleak.HandlerLeakActivity"/>
     </application>
 
 </manifest>

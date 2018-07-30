@@ -16,6 +16,7 @@ import com.wzc.masterblogdemo.constraintlayout1_1_x.ConstraintLayoutActivity;
 import com.wzc.masterblogdemo.deeplink.DeepLinkActivity;
 import com.wzc.masterblogdemo.dialogfragment.MyActivity;
 import com.wzc.masterblogdemo.difference.GetWidthDifferenceActivity;
+import com.wzc.masterblogdemo.handlerleak.HandlerLeakActivity;
 import com.wzc.masterblogdemo.https.OkHttpHttpsActivity;
 import com.wzc.masterblogdemo.layoutinflator.LayoutInflaterSetFactoryActivity;
 import com.wzc.masterblogdemo.preference.SettingsActivity;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("Android 文本监听接口TextWatcher详解", TextWatcherActivity.class);
         mHashMap.put("探究Android View 绘制流程，Canvas 的由来", WhereAreCanvasFromActivity.class);
         mHashMap.put("在开发中实现点击 WebView 中的图片，调用原生控件放大展示", ClickZoominWebViewImgActivity.class);
+        mHashMap.put("Android中Handler引起的内存泄露", HandlerLeakActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
