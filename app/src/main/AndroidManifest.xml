@@ -52,6 +52,8 @@
         <activity android:name=".zoominwebviewimg.ClickZoominWebViewImgActivity"/>
         <activity android:name=".zoominwebviewimg.ImageActivity"/>
         <activity android:name=".handlerleak.HandlerLeakActivity"/>
+        <activity android:name=".annotation.runtime.AnnotationActivity"/>
+        <activity android:name=".annotation.compile.CompileAnnotationActivity"/>
     </application>
 
 </manifest>

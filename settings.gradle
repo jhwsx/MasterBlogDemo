@@ -1,2 +1,5 @@
 include ':app'
 include ':okhttputils'
+include ':viewinject-annotation' // viewinject-annotation 用于存放注解等，Java模块
+include ':viewinject-compiler' // viewinject-compiler 用于编写注解处理器，Java模块
+include ':viewinject-api' // viewinject-api 用于给用户提供使用的API，本例为Andriod模块

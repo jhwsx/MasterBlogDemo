@@ -38,4 +38,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation project(':okhttputils')
     implementation 'com.github.bumptech.glide:glide:3.8.0'
+    // 编译时注解主工程 依赖 api 模块
+    compile project (':viewinject-api')
+    annotationProcessor project(':viewinject-compiler')
 }

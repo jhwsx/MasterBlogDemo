@@ -9,6 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.wzc.masterblogdemo.annotation.compile.CompileAnnotationActivity;
+import com.wzc.masterblogdemo.annotation.runtime.AnnotationActivity;
 import com.wzc.masterblogdemo.cachewebview.UseCacheWebViewLibActivity;
 import com.wzc.masterblogdemo.cachewebview.WebViewCacheActivity;
 import com.wzc.masterblogdemo.canvas.WhereAreCanvasFromActivity;
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("探究Android View 绘制流程，Canvas 的由来", WhereAreCanvasFromActivity.class);
         mHashMap.put("在开发中实现点击 WebView 中的图片，调用原生控件放大展示", ClickZoominWebViewImgActivity.class);
         mHashMap.put("Android中Handler引起的内存泄露", HandlerLeakActivity.class);
+        mHashMap.put("Android注解快速入门和实用解析", AnnotationActivity.class);
+        mHashMap.put("Android 如何编写基于编译时注解的项目", CompileAnnotationActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
