@@ -22,7 +22,9 @@ import com.wzc.masterblogdemo.handlerleak.HandlerLeakActivity;
 import com.wzc.masterblogdemo.https.OkHttpHttpsActivity;
 import com.wzc.masterblogdemo.layoutinflator.LayoutInflaterSetFactoryActivity;
 import com.wzc.masterblogdemo.preference.SettingsActivity;
+import com.wzc.masterblogdemo.rxjava.FlatMapConcatMapActivity;
 import com.wzc.masterblogdemo.textwachter.TextWatcherActivity;
+import com.wzc.masterblogdemo.x5webview.X5WebViewActivity;
 import com.wzc.masterblogdemo.zoominwebviewimg.ClickZoominWebViewImgActivity;
 
 import java.util.Collection;
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("Android中Handler引起的内存泄露", HandlerLeakActivity.class);
         mHashMap.put("Android注解快速入门和实用解析", AnnotationActivity.class);
         mHashMap.put("Android 如何编写基于编译时注解的项目", CompileAnnotationActivity.class);
+        mHashMap.put("RxJava 操作符flatMap 与 concatMap详解", FlatMapConcatMapActivity.class);
+        mHashMap.put("使用X5WebView", X5WebViewActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,7 +1,10 @@
 package com.wzc.masterblogdemo;
 
 import android.app.Application;
+import android.util.Log;
 
+import com.tencent.smtt.export.external.TbsCoreSettings;
+import com.tencent.smtt.sdk.QbSdk;
 import com.wzc.masterblogdemo.util.CrashHandler;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.https.HttpsUtils;
@@ -9,6 +12,7 @@ import com.zhy.http.okhttp.https.HttpsUtils;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 
 import okhttp3.OkHttpClient;
 import ren.yale.android.cachewebviewlib.CacheWebView;
@@ -18,7 +22,7 @@ import ren.yale.android.cachewebviewlib.CacheWebView;
  * @date 2018/5/30
  */
 public class MyApp extends Application {
-
+    private static final String TAG = MyApp.class.getSimpleName();
     private String CER_12306 = "-----BEGIN CERTIFICATE-----\n" +
             "MIICmjCCAgOgAwIBAgIIbyZr5/jKH6QwDQYJKoZIhvcNAQEFBQAwRzELMAkGA1UEBhMCQ04xKTAn\n" +
             "BgNVBAoTIFNpbm9yYWlsIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MQ0wCwYDVQQDEwRTUkNBMB4X\n" +
@@ -40,7 +44,7 @@ public class MyApp extends Application {
         CrashHandler.getInstance().init(this);
 
         // 修改缓存路径和大小,最好在Application中初始化，初始化没有耗时操作
-        File cacheFile = new File(this.getCacheDir(), "cache_master");
+        File cacheFile = new File(this.getExternalFilesDir(null), "cache_master");
         CacheWebView.getCacheConfig().init(this, cacheFile.getAbsolutePath(), 1024 * 1024 * 100, 1024 * 1024 * 10)
                 .enableDebug(true);//100M 磁盘缓存空间,10M 内存缓存空间
 
@@ -50,7 +54,7 @@ public class MyApp extends Application {
             InputStream inputStream = getAssets().open("srca.cer");
             InputStream inputStream1 = getAssets().open("wzc_server.cer");
             InputStream inputStream2 = getAssets().open("wzc_client.bks");
-            HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory(new InputStream[]{inputStream,inputStream1}, inputStream2, "123456");
+            HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory(new InputStream[]{inputStream, inputStream1}, inputStream2, "123456");
             // 方式二: 使用字符串替代证书, 生成方式
             // keytool -printcert -rfc -file srca.cer
 //            InputStream inputStream1 = new Buffer().writeUtf8(CER_12306).inputStream();
@@ -62,6 +66,27 @@ public class MyApp extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        initX5WebView();
+    }
+
+    private void initX5WebView() {
+        QbSdk.PreInitCallback callback = new QbSdk.PreInitCallback() {
+            @Override
+            public void onCoreInitFinished() {
+                Log.d(TAG, "onCoreInitFinished");
+            }
+
+            @Override
+            public void onViewInitFinished(boolean isX5Core) {
+                Log.d(TAG, "onViewInitFinished, isX5Core = " + isX5Core);
+            }
+        };
+        QbSdk.initX5Environment(this, callback);
+
+        HashMap map = new HashMap();
+        map.put(TbsCoreSettings.TBS_SETTINGS_USE_SPEEDY_CLASSLOADER, true);
+        QbSdk.initTbsSettings(map);
     }
 }
 

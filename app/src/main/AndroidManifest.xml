@@ -3,8 +3,18 @@
           package="com.wzc.masterblogdemo">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--x5 需要 start-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <!--x5 需要 end-->
 
+    <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
     <application
         android:name=".MyApp"
         android:allowBackup="true"
@@ -54,6 +64,12 @@
         <activity android:name=".handlerleak.HandlerLeakActivity"/>
         <activity android:name=".annotation.runtime.AnnotationActivity"/>
         <activity android:name=".annotation.compile.CompileAnnotationActivity"/>
+        <activity android:name=".rxjava.FlatMapConcatMapActivity"/>
+        <activity android:name=".x5webview.X5WebViewActivity"
+            android:hardwareAccelerated="false"/>
+        <service android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+        android:label="dexopt"
+        android:process=":dexopt"/>
     </application>
 
 </manifest>
