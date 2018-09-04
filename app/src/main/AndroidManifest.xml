@@ -73,6 +73,7 @@
         <activity android:name=".fragmentstateloss.FragmentStateLossActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".fragmentstateloss.AnotherActivity"/>
+        <activity android:name=".okhttpwebsocket.OkHttpWebsocketActivity"/>
     </application>
 
 </manifest>

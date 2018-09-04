@@ -22,6 +22,7 @@ import com.wzc.masterblogdemo.fragmentstateloss.FragmentStateLossActivity;
 import com.wzc.masterblogdemo.handlerleak.HandlerLeakActivity;
 import com.wzc.masterblogdemo.https.OkHttpHttpsActivity;
 import com.wzc.masterblogdemo.layoutinflator.LayoutInflaterSetFactoryActivity;
+import com.wzc.masterblogdemo.okhttpwebsocket.OkHttpWebsocketActivity;
 import com.wzc.masterblogdemo.preference.SettingsActivity;
 import com.wzc.masterblogdemo.rxjava.FlatMapConcatMapActivity;
 import com.wzc.masterblogdemo.textwachter.TextWatcherActivity;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("RxJava 操作符flatMap 与 concatMap详解", FlatMapConcatMapActivity.class);
         mHashMap.put("使用X5WebView", X5WebViewActivity.class);
         mHashMap.put("让你不再俱怕Fragment State Loss", FragmentStateLossActivity.class);
+        mHashMap.put("WebSocket Client Example with OkHttp", OkHttpWebsocketActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
