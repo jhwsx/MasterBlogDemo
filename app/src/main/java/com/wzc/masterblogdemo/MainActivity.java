@@ -18,6 +18,7 @@ import com.wzc.masterblogdemo.constraintlayout1_1_x.ConstraintLayoutActivity;
 import com.wzc.masterblogdemo.deeplink.DeepLinkActivity;
 import com.wzc.masterblogdemo.dialogfragment.MyActivity;
 import com.wzc.masterblogdemo.difference.GetWidthDifferenceActivity;
+import com.wzc.masterblogdemo.fragmentstateloss.FragmentStateLossActivity;
 import com.wzc.masterblogdemo.handlerleak.HandlerLeakActivity;
 import com.wzc.masterblogdemo.https.OkHttpHttpsActivity;
 import com.wzc.masterblogdemo.layoutinflator.LayoutInflaterSetFactoryActivity;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("Android 如何编写基于编译时注解的项目", CompileAnnotationActivity.class);
         mHashMap.put("RxJava 操作符flatMap 与 concatMap详解", FlatMapConcatMapActivity.class);
         mHashMap.put("使用X5WebView", X5WebViewActivity.class);
+        mHashMap.put("让你不再俱怕Fragment State Loss", FragmentStateLossActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

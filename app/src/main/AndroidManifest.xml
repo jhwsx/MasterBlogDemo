@@ -70,6 +70,9 @@
         <service android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
         android:label="dexopt"
         android:process=":dexopt"/>
+        <activity android:name=".fragmentstateloss.FragmentStateLossActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".fragmentstateloss.AnotherActivity"/>
     </application>
 
 </manifest>
