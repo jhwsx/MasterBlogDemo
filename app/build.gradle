@@ -46,5 +46,7 @@ dependencies {
     annotationProcessor project(':viewinject-compiler')
     implementation 'io.reactivex.rxjava2:rxjava:2.1.12'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1325_43613_sharewithdownload_withoutGame_obfs_20180807_151115.jar')
 }

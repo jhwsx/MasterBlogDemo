@@ -74,6 +74,7 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".fragmentstateloss.AnotherActivity"/>
         <activity android:name=".okhttpwebsocket.OkHttpWebsocketActivity"/>
+        <activity android:name=".rxjava.RxJavaIntervalActivity"/>
     </application>
 
 </manifest>

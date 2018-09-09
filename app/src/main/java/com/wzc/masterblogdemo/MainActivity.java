@@ -25,6 +25,7 @@ import com.wzc.masterblogdemo.layoutinflator.LayoutInflaterSetFactoryActivity;
 import com.wzc.masterblogdemo.okhttpwebsocket.OkHttpWebsocketActivity;
 import com.wzc.masterblogdemo.preference.SettingsActivity;
 import com.wzc.masterblogdemo.rxjava.FlatMapConcatMapActivity;
+import com.wzc.masterblogdemo.rxjava.RxJavaIntervalActivity;
 import com.wzc.masterblogdemo.textwachter.TextWatcherActivity;
 import com.wzc.masterblogdemo.x5webview.X5WebViewActivity;
 import com.wzc.masterblogdemo.zoominwebviewimg.ClickZoominWebViewImgActivity;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("使用X5WebView", X5WebViewActivity.class);
         mHashMap.put("让你不再俱怕Fragment State Loss", FragmentStateLossActivity.class);
         mHashMap.put("WebSocket Client Example with OkHttp", OkHttpWebsocketActivity.class);
+        mHashMap.put("Android RxJava 实战讲解：优雅实现 网络请求轮询", RxJavaIntervalActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
