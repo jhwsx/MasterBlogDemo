@@ -22,6 +22,7 @@ import com.wzc.masterblogdemo.fragmentstateloss.FragmentStateLossActivity;
 import com.wzc.masterblogdemo.handlerleak.HandlerLeakActivity;
 import com.wzc.masterblogdemo.https.OkHttpHttpsActivity;
 import com.wzc.masterblogdemo.layoutinflator.LayoutInflaterSetFactoryActivity;
+import com.wzc.masterblogdemo.noscrollviewpager.NoScrollViewPagerActivity;
 import com.wzc.masterblogdemo.okhttpwebsocket.OkHttpWebsocketActivity;
 import com.wzc.masterblogdemo.preference.SettingsActivity;
 import com.wzc.masterblogdemo.rxjava.FlatMapConcatMapActivity;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("让你不再俱怕Fragment State Loss", FragmentStateLossActivity.class);
         mHashMap.put("WebSocket Client Example with OkHttp", OkHttpWebsocketActivity.class);
         mHashMap.put("Android RxJava 实战讲解：优雅实现 网络请求轮询", RxJavaIntervalActivity.class);
+        mHashMap.put("NoScrollViewPager", NoScrollViewPagerActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

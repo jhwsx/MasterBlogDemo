@@ -75,6 +75,7 @@
         <activity android:name=".fragmentstateloss.AnotherActivity"/>
         <activity android:name=".okhttpwebsocket.OkHttpWebsocketActivity"/>
         <activity android:name=".rxjava.RxJavaIntervalActivity"/>
+        <activity android:name=".noscrollviewpager.NoScrollViewPagerActivity"/>
     </application>
 
 </manifest>
