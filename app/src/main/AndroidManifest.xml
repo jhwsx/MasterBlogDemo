@@ -4,17 +4,17 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <!--x5 需要 start-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
     <!--x5 需要 end-->
 
     <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
-    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
     <application
         android:name=".MyApp"
         android:allowBackup="true"
@@ -55,8 +55,9 @@
         <activity android:name=".difference.GetWidthDifferenceActivity"/>
         <activity android:name=".https.OkHttpHttpsActivity"/>
         <activity android:name=".constraintlayout1_1_x.ConstraintLayoutActivity"/>
-        <activity android:name=".dialogfragment.MyActivity"
-                  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".dialogfragment.MyActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".textwachter.TextWatcherActivity"/>
         <activity android:name=".canvas.WhereAreCanvasFromActivity"/>
         <activity android:name=".zoominwebviewimg.ClickZoominWebViewImgActivity"/>
@@ -65,17 +66,37 @@
         <activity android:name=".annotation.runtime.AnnotationActivity"/>
         <activity android:name=".annotation.compile.CompileAnnotationActivity"/>
         <activity android:name=".rxjava.FlatMapConcatMapActivity"/>
-        <activity android:name=".x5webview.X5WebViewActivity"
+        <activity
+            android:name=".x5webview.X5WebViewActivity"
             android:hardwareAccelerated="false"/>
-        <service android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
-        android:label="dexopt"
-        android:process=":dexopt"/>
-        <activity android:name=".fragmentstateloss.FragmentStateLossActivity"
+
+        <service
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:label="dexopt"
+            android:process=":dexopt"/>
+
+        <activity
+            android:name=".fragmentstateloss.FragmentStateLossActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".fragmentstateloss.AnotherActivity"/>
         <activity android:name=".okhttpwebsocket.OkHttpWebsocketActivity"/>
         <activity android:name=".rxjava.RxJavaIntervalActivity"/>
         <activity android:name=".noscrollviewpager.NoScrollViewPagerActivity"/>
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutActivity"/>
+        <activity android:name=".coordinatorlayout.DependentBehaviorActivity"/>
+        <activity android:name=".coordinatorlayout.ScrollBehaviorActivity"/>
+        <activity android:name=".coordinatorlayout.FabActivity"/>
+        <activity
+            android:name=".coordinatorlayout.TabLayoutActivity"
+            android:label="@string/appbarlayout_tablayout"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".coordinatorlayout.CollapsingToolbarLayoutActivity"
+            android:label="@string/appbarlayout_collapsingtoolbarlayout"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".apk.ApkActivity"/>
+        <activity android:name=".jikelikeview.JiKeLikeViewActivity"/>
+        <activity android:name=".roomdemo.RoomActivity"/>
     </application>
 
 </manifest>

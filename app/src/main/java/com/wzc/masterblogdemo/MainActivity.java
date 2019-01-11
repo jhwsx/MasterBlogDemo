@@ -11,16 +11,19 @@ import android.widget.ListView;
 
 import com.wzc.masterblogdemo.annotation.compile.CompileAnnotationActivity;
 import com.wzc.masterblogdemo.annotation.runtime.AnnotationActivity;
+import com.wzc.masterblogdemo.apk.ApkActivity;
 import com.wzc.masterblogdemo.cachewebview.UseCacheWebViewLibActivity;
 import com.wzc.masterblogdemo.cachewebview.WebViewCacheActivity;
 import com.wzc.masterblogdemo.canvas.WhereAreCanvasFromActivity;
 import com.wzc.masterblogdemo.constraintlayout1_1_x.ConstraintLayoutActivity;
+import com.wzc.masterblogdemo.coordinatorlayout.CoordinatorLayoutActivity;
 import com.wzc.masterblogdemo.deeplink.DeepLinkActivity;
 import com.wzc.masterblogdemo.dialogfragment.MyActivity;
 import com.wzc.masterblogdemo.difference.GetWidthDifferenceActivity;
 import com.wzc.masterblogdemo.fragmentstateloss.FragmentStateLossActivity;
 import com.wzc.masterblogdemo.handlerleak.HandlerLeakActivity;
 import com.wzc.masterblogdemo.https.OkHttpHttpsActivity;
+import com.wzc.masterblogdemo.jikelikeview.JiKeLikeViewActivity;
 import com.wzc.masterblogdemo.layoutinflator.LayoutInflaterSetFactoryActivity;
 import com.wzc.masterblogdemo.noscrollviewpager.NoScrollViewPagerActivity;
 import com.wzc.masterblogdemo.okhttpwebsocket.OkHttpWebsocketActivity;
@@ -62,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mHashMap.put("WebSocket Client Example with OkHttp", OkHttpWebsocketActivity.class);
         mHashMap.put("Android RxJava 实战讲解：优雅实现 网络请求轮询", RxJavaIntervalActivity.class);
         mHashMap.put("NoScrollViewPager", NoScrollViewPagerActivity.class);
+        mHashMap.put("CoordinatorLayout 学习", CoordinatorLayoutActivity.class);
+        mHashMap.put("获取 sd 卡上的 apk 信息", ApkActivity.class);
+        mHashMap.put("Android 自定义 View：教你一步一步实现即刻点赞效果", JiKeLikeViewActivity.class);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

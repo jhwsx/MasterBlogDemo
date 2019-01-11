@@ -3,4 +3,7 @@
     <string name="hello_world">Hello World</string>
     <string name="name">王志超</string>
     <string name="adress">河南</string>
+    <string name="appbarlayout_tablayout">AppBarLayout嵌套TabLayout</string>
+    <string name="appbarlayout_collapsingtoolbarlayout">AppBarLayout嵌套CollapsingToolbarLayout</string>
+    <string name="str">我们都知道，在5.0之后引入了很多新的转场动画，使过渡更加的合理化了，适当地加入动画能使你的app看起来眼前一亮，第一印象取胜，所以我们有理由来学习它，为了有兴趣看下去，我们先亮出效果，录屏有点卡顿，实际比较流畅</string>
 </resources>
