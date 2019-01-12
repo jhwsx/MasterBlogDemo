@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="JikeLikeView">
+        <!--点赞数目-->
         <attr name="like_number" format="integer"/>
+        <!--点赞状态，点赞是 true， 不点赞是 false-->
+        <attr name="is_liked" format="boolean"/>
     </declare-styleable>
 </resources>

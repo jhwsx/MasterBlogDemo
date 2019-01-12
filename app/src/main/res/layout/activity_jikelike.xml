@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:padding="16dp"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <com.wzc.masterblogdemo.jikelikeview.JikeLikeView
         android:layout_gravity="center_horizontal"
-        android:background="#44000000"
+        android:background="#4400ff00"
+        app:like_number="1999"
+        app:is_liked="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.wzc.masterblogdemo.jikelikeview.JikeLikeView
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#44ff0000"
+        app:like_number="100"
+        app:is_liked="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>
