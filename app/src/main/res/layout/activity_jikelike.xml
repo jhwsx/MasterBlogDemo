@@ -20,4 +20,9 @@
         app:is_liked="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <CheckBox
+        android:id="@+id/cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>

@@ -1,5 +1,7 @@
 package com.wzc.masterblogdemo.jikelikeview;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -92,7 +94,7 @@ public class JikeLikeView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         // View 的高度 = 小手图像的高度 + 20dp
-        int height = (int) (mUnlikeBitmap.getHeight() + 2 * Utils.dp2px(getContext(), 10));
+        int height = mUnlikeBitmap.getHeight() + 2 * Utils.dp2px(getContext(), 10);
         heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
         float textWidth = mTextPaint.measureText(String.valueOf(mLikeNumber));
         // View 的宽度 = 小手图像的宽度 + 文字的宽度 + 30dp
@@ -131,7 +133,7 @@ public class JikeLikeView extends View {
         int textLength = textValue.length();
         mTextPaint.getTextBounds(textValue, 0, textValue.length(), mTextBounds);
         // 文字起点的 x 坐标
-        int textX = (int) (handBitmapWidth + Utils.dp2px(getContext(), 20));
+        int textX = handBitmapWidth + Utils.dp2px(getContext(), 20);
         // 文字起点的 y 坐标
         int textY = centerY - (mTextBounds.top + mTextBounds.bottom) / 2;
         // 绘制文字
@@ -157,12 +159,12 @@ public class JikeLikeView extends View {
 
     private void drawShining(Canvas canvas, int handBitmapWidth, int handTop) {
         // 顶边：（整个图像高度 - 四点图像高度）/ 2 - 四点图像高度 + 17dp
-        int shiningTop = (int) (handTop - mShiningBitmap.getHeight() + Utils.dp2px(getContext(), 17));
+        int shiningTop = handTop - mShiningBitmap.getHeight() + Utils.dp2px(getContext(), 17);
         mBitmapPaint.setAlpha((int) (255 * mShiningAlpha));
         canvas.save();
         canvas.scale(mShiningAlpha, mShiningAlpha, handBitmapWidth / 2, handTop);
         // 左边：15dp
-        int shiningLeft = (int) Utils.dp2px(getContext(), 15);
+        int shiningLeft = Utils.dp2px(getContext(), 15);
         canvas.restore();
         mBitmapPaint.setAlpha(255);
         if (mIsLiked) {
@@ -215,8 +217,10 @@ public class JikeLikeView extends View {
         mIsLiked = !mIsLiked;
         if (mIsLiked) {
             mLikeNumber++;
+            setLikeNumber();
         } else {
             mLikeNumber--;
+            setLikeNumber();
         }
         invalidate();
     }
@@ -228,13 +232,20 @@ public class JikeLikeView extends View {
         // 开始移动的 y 坐标
         float startY;
         // 最大移动的高度
-        mTextMaxMove = (int) Utils.dp2px(getContext(), 20);
+        mTextMaxMove = Utils.dp2px(getContext(), 20);
         if (mIsLiked) {
             startY = mTextMaxMove;
         } else {
             startY = -mTextMaxMove;
         }
+        ObjectAnimator textAlphaAnim = ObjectAnimator.ofFloat(this, "textAlpha", 0f, 1f);
+        textAlphaAnim.setDuration(mDuration);
+        ObjectAnimator textMoveAnim = ObjectAnimator.ofFloat(this, "textTranslate", startY, 0);
+        textMoveAnim.setDuration(mDuration);
 
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(textAlphaAnim, textMoveAnim);
+        animatorSet.start();
     }
 
     /**

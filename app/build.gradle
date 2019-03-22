@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.wzc.masterblogdemo"
         minSdkVersion 16
@@ -22,12 +21,12 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:25.3.1'
-    implementation 'com.android.support:preference-v7:25.3.1'
-    implementation 'com.android.support:cardview-v7:25.3.1'
-    implementation 'com.android.support:design:25.3.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:preference-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
     // v14 版本显然只是 v7.preference library的增量
-    implementation 'com.android.support:preference-v14:25.3.1'
+    implementation 'com.android.support:preference-v14:28.0.0'
     implementation 'ren.yale.android:cachewebviewlib:1.4.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     // dagger2
@@ -44,7 +43,7 @@ dependencies {
     implementation project(':okhttputils')
     implementation 'com.github.bumptech.glide:glide:3.8.0'
     // 编译时注解主工程 依赖 api 模块
-    compile project(':viewinject-api')
+    implementation project(':viewinject-api')
     annotationProcessor project(':viewinject-compiler')
     implementation 'io.reactivex.rxjava2:rxjava:2.1.12'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
